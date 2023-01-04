@@ -14,6 +14,7 @@ import { FilePond, registerPlugin } from 'react-filepond';
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import { useEffect, useState } from "react";
+import PurchaseButton from "../components/PurchaseButton";
 
 
 // Register the plugins
@@ -76,9 +77,7 @@ const Home: NextPage = () => {
           ))}
         </div>
         {/* <a href="https://storyset.com/technology">Technology illustrations by Storyset</a> */}
-        <button className={`rounded-md bg-violet-500 text-white p-2 px-4 ${files?.length ? null : "cursor-not-allowed"}`}>
-          Generate
-        </button>
+        <PurchaseButton />
       </main>
     </>
   );
